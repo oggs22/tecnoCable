@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Util/SizingInfo.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
+import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
+import 'package:tecnocable/Widgets/MobileComponents/TecnocableAppBar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double _scrollPosition = 0;
+  double _opacity = 0;
+
   ResponsiveApp responsiveApp;
 
   @override
@@ -19,6 +24,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
-    return Scaffold();
+
+    _opacity = _scrollPosition < responsiveApp.opacityHeight
+        ? _scrollPosition / responsiveApp.opacityHeight
+        : 1;
+    return Scaffold(
+      appBar: isMobileAndTablet(context)
+          ? TecnocableAppBar(_opacity)
+          : Header(_opacity),
+    );
   }
 }

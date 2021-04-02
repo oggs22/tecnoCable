@@ -51,7 +51,7 @@ class ResponsiveApp {
   get lineHznButtonHeight => setHeight(2);
   get lineHznButtonWidth => setWidth(20);
   //Spaces
-  get barSpace1Width => setWidth(60);
+  get barSpace1Width => setWidth(40);
   get barSpace2Width => setWidth(80);
 
   //Text Size
