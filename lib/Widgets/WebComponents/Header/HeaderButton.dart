@@ -14,11 +14,7 @@ class HeaderButton extends StatefulWidget {
 
 class _HeaderButtonState extends State<HeaderButton> {
   int index;
-  final List _isHovering = [
-    false,
-    false,
-    false,
-  ];
+  final List _isHovering = [false, false, false, false, false];
 
   ResponsiveApp responsiveApp;
 
@@ -41,8 +37,10 @@ class _HeaderButtonState extends State<HeaderButton> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            widget.title,
+            widget.title.toUpperCase(),
             style: TextStyle(
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w600,
               color: _isHovering[this.index] ? Colors.white : Colors.white70,
             ),
           ),
