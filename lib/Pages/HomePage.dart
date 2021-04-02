@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tecnocable/Util/SizingInfo.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
+import 'package:tecnocable/Widgets/MobileComponents/TecnocableAppBar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -28,7 +29,9 @@ class _HomePageState extends State<HomePage> {
         ? _scrollPosition / responsiveApp.opacityHeight
         : 1;
     return Scaffold(
-      appBar: Header(_opacity),
+      appBar: isMobileAndTablet(context)
+          ? TecnocableAppBar(_opacity)
+          : Header(_opacity),
     );
   }
 }
