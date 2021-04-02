@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Values/StringApp.dart';
+import 'package:tecnocable/Values/ColorsApp.dart';
 
 import 'HeaderButton.dart';
 
@@ -22,7 +23,7 @@ class _HeaderState extends State<Header> {
     responsiveApp = ResponsiveApp(context);
 
     return Container(
-        color: Theme.of(context).primaryColor.withOpacity(widget.opacity),
+        color: backgroundBlueColor,
         child: Padding(
             padding: responsiveApp.edgeInsetsApp.allMediumEdgeInsets,
             child:
