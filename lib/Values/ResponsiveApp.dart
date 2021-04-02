@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:goodcoffee/Util/SizingInfo.dart';
-import 'package:goodcoffee/Values/EdgeInsetsApp.dart';
+import 'package:tecnocable/Util/SizingInfo.dart';
+import 'package:tecnocable/Values/EdgeInsetsApp.dart';
 
 class ResponsiveApp {
   BuildContext _context;
