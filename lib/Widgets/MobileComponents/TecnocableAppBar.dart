@@ -15,7 +15,7 @@ class TecnocableAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
     return AppBar(
-      backgroundColor: backgroundBlueColor.withOpacity(opacity),
+      backgroundColor: backgroundBlueColor,
       elevation: 0,
       leading: IconButton(
         icon: Icon(Icons.menu),

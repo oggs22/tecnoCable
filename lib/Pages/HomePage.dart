@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tecnocable/Util/SizingInfo.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Container/AboutUsContainer.dart';
+import 'package:tecnocable/Widgets/MobileComponents/Body/Container/MobileAboutUsContainer.dart';
 import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
 import 'package:tecnocable/Widgets/MobileComponents/TecnocableAppBar.dart';
 import 'package:tecnocable/Util/Keys.dart';
@@ -48,7 +49,11 @@ class _HomePageState extends State<HomePage> {
       appBar: isMobileAndTablet(context)
           ? TecnocableAppBar(_opacity)
           : Header(_opacity),
-      body: ListView(children: [AboutUsContainer()]),
+      body: ListView(children: [
+        isMobileAndTablet(context)
+            ? MobileAboutUsContainer()
+            : AboutUsContainer(),
+      ]),
     );
   }
 }
