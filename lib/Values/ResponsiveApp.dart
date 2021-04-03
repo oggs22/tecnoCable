@@ -64,6 +64,12 @@ class ResponsiveApp {
   get letterSpacingCarouselWidth => setWidth(10);
   get letterSpacingHeaderWidth => setWidth(3);
 
+  //About Us Container
+  get paddingLeftAboutUs => setWidth(130);
+  get aboutUsText => setSp(30);
+  get aboutUsButtonText => setSp(12);
+  get aboutUsButtonSpace => setHeight(20);
+
   setWidth(int width) => width * _scaleWidth;
 
   setHeight(int height) => height * _scaleHeight;

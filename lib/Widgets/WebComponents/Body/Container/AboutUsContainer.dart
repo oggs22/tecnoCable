@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
-
-// class AboutUsContainer extends StatelessWidget {
-//   ResponsiveApp responsiveApp;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     responsiveApp = ResponsiveApp(context);
-//     return Scaffold(
-//         body: Stack(
-//       children: [Image.asset('assets/images/background.png')],
-//     ));
-//   }
-// }
+import 'package:tecnocable/Values/StringApp.dart';
+import 'package:tecnocable/Values/ColorsApp.dart';
 
 class AboutUsContainer extends StatelessWidget {
   ResponsiveApp responsiveApp;
@@ -21,12 +10,40 @@ class AboutUsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
     return Container(
-        height: MediaQuery.of(context).size.height,
+        padding: responsiveApp.edgeInsetsApp.onlyLargeBottomEdgeInsets,
+        height: MediaQuery.of(context).size.height - 55,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             image: DecorationImage(
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
           image: AssetImage("assets/images/background.png"),
-        )));
+        )),
+        child: Container(
+          padding: EdgeInsets.only(left: responsiveApp.paddingLeftAboutUs),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(aboutUsTextStr.toUpperCase(),
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w900,
+                      fontSize: responsiveApp.aboutUsText,
+                      height: 1.2)),
+              SizedBox(height: responsiveApp.aboutUsButtonSpace),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: backgroundPinkColor,
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  ),
+                  onPressed: () {},
+                  child: Text(aboutUsButtonTextStr.toUpperCase(),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: responsiveApp.aboutUsButtonText,
+                      )))
+            ],
+          ),
+        ));
   }
 }
