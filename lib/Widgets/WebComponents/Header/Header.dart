@@ -26,28 +26,31 @@ class _HeaderState extends State<Header> {
         color: backgroundBlueColor,
         child: Padding(
             padding: responsiveApp.edgeInsetsApp.allMediumEdgeInsets,
-            child:
-                Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-              Image.asset('assets/images/logo.png'),
-              Expanded(
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    HeaderButton(0, aboutUsStr),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    HeaderButton(1, servicesStr),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    HeaderButton(2, knowUsStr),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    HeaderButton(3, ratesStr),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    HeaderButton(4, contactUsStr),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    Image.asset('assets/images/whatsapp_header.png'),
-                    SizedBox(width: responsiveApp.barSpace1Width),
-                    Image.asset('assets/images/instagram_header.png'),
-                  ])),
-            ])));
+            child: Padding(
+              padding: responsiveApp.edgeInsetsApp.hrzExLargeEdgeInsets,
+              child:
+                  Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Image.asset('assets/images/logo.png'),
+                Expanded(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                      HeaderButton(0, aboutUsStr),
+                      SizedBox(width: responsiveApp.barSpace2Width),
+                      HeaderButton(1, servicesStr),
+                      SizedBox(width: responsiveApp.barSpace2Width),
+                      HeaderButton(2, knowUsStr),
+                      SizedBox(width: responsiveApp.barSpace2Width),
+                      HeaderButton(3, ratesStr),
+                      SizedBox(width: responsiveApp.barSpace2Width),
+                      HeaderButton(4, contactUsStr),
+                      SizedBox(width: responsiveApp.barSpace1Width),
+                      Image.asset('assets/images/whatsapp_header.png'),
+                      SizedBox(width: responsiveApp.barSpace1Width),
+                      Image.asset('assets/images/instagram_header.png'),
+                    ])),
+              ]),
+            )));
   }
 }

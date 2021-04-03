@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
+import 'package:tecnocable/Values/ColorsApp.dart';
 
 class HeaderButton extends StatefulWidget {
   String title;
@@ -41,7 +42,7 @@ class _HeaderButtonState extends State<HeaderButton> {
             style: TextStyle(
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w600,
-              color: _isHovering[this.index] ? Colors.white : Colors.white70,
+              color: _isHovering[this.index] ? Colors.white : barWhiteTextColor,
             ),
           ),
           SizedBox(height: 5),
