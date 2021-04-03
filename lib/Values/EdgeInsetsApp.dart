@@ -17,6 +17,7 @@ class EdgeInsetsApp {
   EdgeInsets hrzMediumEdgeInsets;
   EdgeInsets hrzSmallEdgeInsets;
   EdgeInsets hrzLargeEdgeInsets;
+  EdgeInsets hrzExLargeEdgeInsets;
 
   //Solo derecha, izquierda, arriba y abajo SMALL
   EdgeInsets onlySmallTopEdgeInsets;
@@ -52,7 +53,7 @@ class EdgeInsetsApp {
     double _largeWidthEdgeInsets = _responsiveApp.setWidth(20);
 
     double _largeExHeightEdgeInsets = _responsiveApp.setHeight(100);
-    double _largeExWidthEdgeInsets = _responsiveApp.setWidth(100);
+    double _largeExWidthEdgeInsets = _responsiveApp.setWidth(50);
     //Todo
     allSmallEdgeInsets = EdgeInsets.symmetric(
         vertical: _smallHeightEdgeInsets, horizontal: _smallWidthEdgeInsets);
@@ -80,6 +81,8 @@ class EdgeInsetsApp {
         EdgeInsets.symmetric(horizontal: _smallWidthEdgeInsets);
     hrzLargeEdgeInsets =
         EdgeInsets.symmetric(horizontal: _largeWidthEdgeInsets);
+    hrzExLargeEdgeInsets =
+        EdgeInsets.symmetric(horizontal: _largeExWidthEdgeInsets);
 
     //Solo derecha, izquierda, arriba y abajo SMALL
     onlySmallTopEdgeInsets = EdgeInsets.only(top: _smallHeightEdgeInsets);

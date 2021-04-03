@@ -51,8 +51,8 @@ class ResponsiveApp {
   get lineHznButtonHeight => setHeight(2);
   get lineHznButtonWidth => setWidth(20);
   //Spaces
-  get barSpace1Width => setWidth(40);
-  get barSpace2Width => setWidth(80);
+  get barSpace1Width => setWidth(20);
+  get barSpace2Width => setWidth(40);
 
   //Text Size
   get bodyText1 => setSp(12);
@@ -63,6 +63,12 @@ class ResponsiveApp {
   //Spacing
   get letterSpacingCarouselWidth => setWidth(10);
   get letterSpacingHeaderWidth => setWidth(3);
+
+  //About Us Container
+  get paddingLeftAboutUs => setWidth(130);
+  get aboutUsText => setSp(30);
+  get aboutUsButtonText => setSp(12);
+  get aboutUsButtonSpace => setHeight(20);
 
   setWidth(int width) => width * _scaleWidth;
 

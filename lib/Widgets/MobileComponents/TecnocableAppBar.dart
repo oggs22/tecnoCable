@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tecnocable/Util/Keys.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Values/StringApp.dart';
+import 'package:tecnocable/Values/ColorsApp.dart';
 
 class TecnocableAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double opacity;
@@ -14,7 +15,7 @@ class TecnocableAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
     return AppBar(
-      backgroundColor: Theme.of(context).primaryColor.withOpacity(opacity),
+      backgroundColor: backgroundBlueColor,
       elevation: 0,
       leading: IconButton(
         icon: Icon(Icons.menu),

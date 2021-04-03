@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Values/ResponsiveApp.dart';
 import 'Pages/HomePage.dart';
+import 'Values/ColorsApp.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         responsiveApp = ResponsiveApp(context);
         return Theme(
             data: ThemeData(
-              backgroundColor: Colors.blueGrey[900],
+              backgroundColor: backgroundWhiteColor,
               primaryColor: Colors.black87,
               accentColor: Colors.blueGrey,
               iconTheme: IconThemeData(color: Colors.white),

@@ -14,7 +14,7 @@ bool isDesktop(BuildContext context) {
 }
 
 bool isMobileAndTablet(context) {
-  return MediaQuery.of(context).size.width <= tabletExtraLarge;
+  return MediaQuery.of(context).size.width <= desktopSmall;
 }
 
 //Mobile size
@@ -36,7 +36,7 @@ double get tabletLarge => 850;
 double get tabletExtraLarge => 900;
 
 //desktop size
-double get desktopSmall => 950;
+double get desktopSmall => 1250;
 
 double get desktopNormal => 1920;
 
