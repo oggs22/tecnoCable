@@ -11,3 +11,7 @@ String get ratesStr => "Tarifas";
 String get aboutUsTextStr =>
     "Somos Técnicos\nespecializados\nen Televisión\nSATELITAL";
 String get aboutUsButtonTextStr => "Contáctanos";
+
+//Service Title
+String get serviceDarkBlueTextStr => "Ofrecemos\nservicio";
+String get serviceLightBlueTextStr => "de cálidad";
