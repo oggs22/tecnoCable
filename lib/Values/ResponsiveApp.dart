@@ -70,6 +70,14 @@ class ResponsiveApp {
   get aboutUsButtonText => setSp(12);
   get aboutUsButtonSpace => setHeight(20);
 
+  //Title with two colors
+  get sizeTitleWithTwoColors => setSp(25);
+
+  // Service List
+  get sizeServiceList => setSp(10);
+  get paddingTopAboutUs => setHeight(80);
+  get paddingRightAboutUs => setWidth(50);
+
   setWidth(int width) => width * _scaleWidth;
 
   setHeight(int height) => height * _scaleHeight;
