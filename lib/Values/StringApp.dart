@@ -19,3 +19,5 @@ String get serviceLightBlueTextStr => "de cálidad";
 //Footer
 String get footerTextSrt =>
     "Todos los derechos reservados / Términos y condiciones aplican";
+String get mobileFooterTextSrt =>
+    "Todos los derechos reservados /\n Términos y condiciones aplican";

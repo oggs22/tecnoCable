@@ -6,8 +6,8 @@ import 'package:tecnocable/Widgets/Components/TitleWithTwoColors.dart';
 import 'package:tecnocable/Models/Service.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
 
-class FooterSection extends StatelessWidget {
-  FooterSection();
+class MobileFooterSection extends StatelessWidget {
+  MobileFooterSection();
   ResponsiveApp responsiveApp;
 
   @override
@@ -16,26 +16,18 @@ class FooterSection extends StatelessWidget {
 
     return Container(
       color: LightBlueTextColor,
-      height: responsiveApp.heightFooter,
-      padding: EdgeInsets.only(
-          left: responsiveApp.paddingLeftAboutUs,
-          right: responsiveApp.paddingLeftAboutUs),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      height: responsiveApp.mobileHeightFooter,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
-            footerTextSrt.toUpperCase(),
+            mobileFooterTextSrt.toUpperCase(),
             style: TextStyle(
-                fontSize: responsiveApp.footerText,
+                fontSize: responsiveApp.mobileFooterText,
                 fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
-          Row(
-            children: [
-              Image.asset('assets/images/whatsapp_header.png'),
-              SizedBox(width: responsiveApp.barSpace1Width),
-              Image.asset('assets/images/instagram_header.png'),
-            ],
-          )
+          Image.asset('assets/images/mobile_social_networks.png')
         ],
       ),
     );

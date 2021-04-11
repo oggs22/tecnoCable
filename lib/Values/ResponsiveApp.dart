@@ -80,6 +80,9 @@ class ResponsiveApp {
 
   // Footer
   get heightFooter => setHeight(60);
+  get mobileHeightFooter => setHeight(250);
+  get footerText => setSp(10);
+  get mobileFooterText => setSp(14);
 
   setWidth(int width) => width * _scaleWidth;
 

@@ -7,6 +7,7 @@ import 'package:tecnocable/Widgets/WebComponents/Body/Footer/FooterSection.dart'
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/ServiceSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Container/AboutUsContainer.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Body/Container/MobileAboutUsContainer.dart';
+import 'package:tecnocable/Widgets/MobileComponents/Footer/MobileFooterSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
 import 'package:tecnocable/Widgets/MobileComponents/TecnocableAppBar.dart';
 import 'package:tecnocable/Util/Keys.dart';
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             ? MobileAboutUsContainer()
             : AboutUsContainer(),
         isMobileAndTablet(context) ? MobileServiceSection() : ServiceSection(),
-        FooterSection()
+        isMobileAndTablet(context) ? MobileFooterSection() : FooterSection()
       ]),
     );
   }
