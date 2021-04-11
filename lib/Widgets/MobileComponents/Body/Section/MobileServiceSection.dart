@@ -31,7 +31,8 @@ class MobileServiceSection extends StatelessWidget {
               ),
               ServiceListView(serviceList)
             ],
-          )
+          ),
+          SizedBox(height: responsiveApp.aboutUsButtonSpace),
         ],
       ),
     );

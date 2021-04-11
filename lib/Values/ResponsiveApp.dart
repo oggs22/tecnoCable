@@ -78,6 +78,12 @@ class ResponsiveApp {
   get paddingTopAboutUs => setHeight(80);
   get paddingRightAboutUs => setWidth(50);
 
+  // Footer
+  get heightFooter => setHeight(60);
+  get mobileHeightFooter => setHeight(250);
+  get footerText => setSp(10);
+  get mobileFooterText => setSp(14);
+
   setWidth(int width) => width * _scaleWidth;
 
   setHeight(int height) => height * _scaleHeight;
