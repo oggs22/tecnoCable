@@ -8,9 +8,11 @@ import 'package:tecnocable/Widgets/WebComponents/Body/Footer/FooterSection.dart'
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/CostSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/ServiceSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Container/AboutUsContainer.dart';
+import 'package:tecnocable/Widgets/WebComponents/Body/Section/ContactUs.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Body/Container/MobileAboutUsContainer.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Footer/MobileFooterSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
+import 'package:tecnocable/Widgets/MobileComponents/Body/Section/MobileContactUs.dart';
 import 'package:tecnocable/Widgets/MobileComponents/TecnocableAppBar.dart';
 import 'package:tecnocable/Util/Keys.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -61,6 +63,9 @@ class _HomePageState extends State<HomePage> {
             : AboutUsContainer(),
         isMobileAndTablet(context) ? MobileServiceSection() : ServiceSection(),
         isMobileAndTablet(context) ? MobileCostSection() : CostSection(),
+        isMobileAndTablet(context)
+            ? MobileContactUsSection()
+            : ContactUsSection(),
         isMobileAndTablet(context) ? MobileFooterSection() : FooterSection(),
       ]),
     );

@@ -84,6 +84,9 @@ class ResponsiveApp {
   get footerText => setSp(10);
   get mobileFooterText => setSp(14);
 
+  // Contact Us
+  get contactUsText => setSp(20);
+
   setWidth(int width) => width * _scaleWidth;
 
   setHeight(int height) => height * _scaleHeight;

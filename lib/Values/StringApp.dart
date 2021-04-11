@@ -45,3 +45,8 @@ String get installationAntennasTextStr =>
     "Instalación de antenas\ncomunitarias para múltiples\npuntos";
 String get installationAntennasExplanationTextStr => "Pedir presupuesto";
 String get here => "Aquí";
+
+// Contact Us
+String get contactUsTextStr => "Contáctanos";
+
+String get socialNetworksUsTextStr => "Vía whatsapp\nO INSTAGRAM";
