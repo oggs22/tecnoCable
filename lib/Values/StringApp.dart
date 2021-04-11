@@ -15,3 +15,7 @@ String get aboutUsButtonTextStr => "Contáctanos";
 //Service Title
 String get serviceDarkBlueTextStr => "Ofrecemos\nservicio";
 String get serviceLightBlueTextStr => "de cálidad";
+
+//Footer
+String get footerTextSrt =>
+    "Todos los derechos reservados / Términos y condiciones aplican";
