@@ -40,3 +40,8 @@ String get reWiringTextStr => "Re-cableado";
 String get reWiriginCostTextStr => "a patir de 40\$";
 String get reWiriginExplanationTextStr =>
     "Consta de volver hacer el cableado ya sea\npor cambio de cable o por querer otra ruta\ndel mismo, se debe tener en cuenta que el\ncliente debe pedir presupuesto del costo\ndelmetro del cable.";
+
+String get installationAntennasTextStr =>
+    "Instalación de antenas\ncomunitarias para múltiples\npuntos";
+String get installationAntennasExplanationTextStr => "Pedir presupuesto";
+String get here => "Aquí";

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Util/SizingInfo.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
+import 'package:tecnocable/Widgets/MobileComponents/Body/Section/MobileCostSection.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Body/Section/MobileServiceSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Footer/FooterSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/CostSection.dart';
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
             ? MobileAboutUsContainer()
             : AboutUsContainer(),
         isMobileAndTablet(context) ? MobileServiceSection() : ServiceSection(),
-        CostSection(),
+        isMobileAndTablet(context) ? MobileCostSection() : CostSection(),
         isMobileAndTablet(context) ? MobileFooterSection() : FooterSection(),
       ]),
     );
