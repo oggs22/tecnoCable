@@ -13,34 +13,35 @@ class ServiceSection extends StatelessWidget {
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
 
-    return Padding(
-      padding: EdgeInsets.only(
-          top: responsiveApp.paddingTopAboutUs,
-          bottom: responsiveApp.paddingTopAboutUs,
-          right: responsiveApp.paddingRightAboutUs),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: responsiveApp.paddingLeftAboutUs),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TitleWithTwoColors(
-                  darkBlueText: serviceDarkBlueTextStr,
-                  lightBlueText: serviceLightBlueTextStr,
-                ),
-                SizedBox(height: responsiveApp.aboutUsButtonSpace),
-                ServiceListView(serviceList)
-              ],
-            ),
-          ),
-          Image.asset(
-            'assets/images/telecommunications.png',
-            fit: BoxFit.cover,
-          )
-        ],
-      ),
-    );
+    return Container(
+        padding: responsiveApp.edgeInsetsApp.onlyLargeVerticalEdgeInsets,
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Container(
+              width: 1000,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TitleWithTwoColors(
+                        darkBlueText: serviceDarkBlueTextStr,
+                        lightBlueText: serviceLightBlueTextStr,
+                      ),
+                      SizedBox(height: responsiveApp.aboutUsButtonSpace),
+                      ServiceListView(serviceList)
+                    ],
+                  ),
+                  Image.asset(
+                    'assets/images/telecommunications.png',
+                    fit: BoxFit.cover,
+                  )
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }

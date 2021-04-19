@@ -9,6 +9,7 @@ import 'package:tecnocable/Widgets/WebComponents/Body/Section/CostSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/ServiceSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Container/AboutUsContainer.dart';
 import 'package:tecnocable/Widgets/WebComponents/Body/Section/ContactUs.dart';
+import 'package:tecnocable/Widgets/WebComponents/Body/Section/TechnicalVisitSection.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Body/Container/MobileAboutUsContainer.dart';
 import 'package:tecnocable/Widgets/MobileComponents/Footer/MobileFooterSection.dart';
 import 'package:tecnocable/Widgets/WebComponents/Header/Header.dart';
@@ -57,11 +58,12 @@ class _HomePageState extends State<HomePage> {
       appBar: isMobileAndTablet(context)
           ? TecnocableAppBar(_opacity)
           : Header(_opacity),
-      body: ListView(children: [
+      body: ListView(children: <Widget>[
         isMobileAndTablet(context)
             ? MobileAboutUsContainer()
             : AboutUsContainer(),
         isMobileAndTablet(context) ? MobileServiceSection() : ServiceSection(),
+        TechnicalVisitSection(),
         isMobileAndTablet(context) ? MobileCostSection() : CostSection(),
         isMobileAndTablet(context)
             ? MobileContactUsSection()

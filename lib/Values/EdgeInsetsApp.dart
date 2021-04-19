@@ -37,6 +37,7 @@ class EdgeInsetsApp {
   EdgeInsets onlyLargeBottomEdgeInsets;
   EdgeInsets onlyLargeRightEdgeInsets;
   EdgeInsets onlyLargeLeftEdgeInsets;
+  EdgeInsets onlyLargeVerticalEdgeInsets;
 
   EdgeInsets onlyExLargeTopEdgeInsets;
 
@@ -111,6 +112,8 @@ class EdgeInsetsApp {
     onlyLargeBottomEdgeInsets = EdgeInsets.only(bottom: _largeHeightEdgeInsets);
     onlyLargeRightEdgeInsets = EdgeInsets.only(right: _largeWidthEdgeInsets);
     onlyLargeLeftEdgeInsets = EdgeInsets.only(left: _largeWidthEdgeInsets);
+    onlyLargeVerticalEdgeInsets = EdgeInsets.only(
+        bottom: _largeHeightEdgeInsets, top: _largeHeightEdgeInsets);
 
     //Solo derecha, izquierda, arriba y abajo Exxlarge
     onlyExLargeTopEdgeInsets = EdgeInsets.only(top: _largeExHeightEdgeInsets);
