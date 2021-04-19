@@ -20,69 +20,73 @@ class TechnicalVisitSection extends StatelessWidget {
     responsiveApp = ResponsiveApp(context);
 
     return Container(
-      padding: EdgeInsets.only(
-          left: responsiveApp.paddingLeftAboutUs,
-          bottom: responsiveApp.paddingLeftAboutUs),
-      child: Row(
-        children: [
-          TitleWithTwoColors(
-            darkBlueText: technicalVisitFirstTitle,
-            lightBlueText: technicalVisitSecondTitle,
-          ),
-          SizedBox(width: responsiveApp.aboutUsButtonSpace),
-          Container(
-              height: 200,
-              width: responsiveApp.technicalVisitScrollWidth,
-              // child ListView
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 160.0,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.green,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.orange,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.green,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 160.0,
-                      color: Colors.orange,
-                    ),
-                  ],
-                ),
-              )),
-        ],
-      ),
-    );
+        padding: responsiveApp.edgeInsetsApp.onlyLargeVerticalEdgeInsets,
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Container(
+              width: 1000,
+              child: Row(
+                children: [
+                  TitleWithTwoColors(
+                    darkBlueText: technicalVisitFirstTitle,
+                    lightBlueText: technicalVisitSecondTitle,
+                  ),
+                  SizedBox(width: responsiveApp.aboutUsButtonSpace),
+                  Container(
+                      height: 200,
+                      width: 710,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 160.0,
+                              color: Colors.red,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.blue,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.green,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.yellow,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.orange,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.red,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.blue,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.green,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.yellow,
+                            ),
+                            Container(
+                              width: 160.0,
+                              color: Colors.orange,
+                            ),
+                          ],
+                        ),
+                      )),
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }
