@@ -89,6 +89,8 @@ class ResponsiveApp {
 
   //TechnicalVisit
   get technicalVisitScrollWidth => setWidth(600);
+  get technicalVisionContainerCardHeight => setHeight(330);
+  get technicalVisionContainerCardWidth => setWidth(400);
 
   setWidth(int width) => width * _scaleWidth;
 
