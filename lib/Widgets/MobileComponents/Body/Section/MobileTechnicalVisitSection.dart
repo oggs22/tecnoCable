@@ -21,7 +21,7 @@ class MobileTechnicalVisitSection extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: responsiveApp.technicalVisionContainerCardWidth,
+              width: responsiveApp.width,
               child: Column(
                 children: [
                   TitleWithTwoColors(
@@ -31,8 +31,9 @@ class MobileTechnicalVisitSection extends StatelessWidget {
                   SizedBox(width: responsiveApp.aboutUsButtonSpace),
                   Container(
                       height: responsiveApp.technicalVisionContainerCardHeight,
-                      width: responsiveApp.technicalVisionContainerCardWidth,
+                      width: responsiveApp.width,
                       child: SingleChildScrollView(
+                        padding: EdgeInsets.only(left: 15, right: 15),
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
