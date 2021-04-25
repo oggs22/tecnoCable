@@ -38,6 +38,7 @@ class MobileAboutUsContainer extends StatelessWidget {
                   onPressed: () {},
                   child: Text(aboutUsButtonTextStr.toUpperCase(),
                       style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w500,
                         fontSize: responsiveApp.aboutUsButtonText,
                       ))),

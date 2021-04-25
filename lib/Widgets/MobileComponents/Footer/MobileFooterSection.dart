@@ -23,6 +23,7 @@ class MobileFooterSection extends StatelessWidget {
           Text(
             mobileFooterTextSrt.toUpperCase(),
             style: TextStyle(
+                fontFamily: 'Poppins',
                 fontSize: responsiveApp.mobileFooterText,
                 fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,

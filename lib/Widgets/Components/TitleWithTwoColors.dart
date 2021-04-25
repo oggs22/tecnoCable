@@ -24,7 +24,6 @@ class TitleWithTwoColors extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: responsiveApp.sizeTitleWithTwoColors),
       ),
-      SizedBox(width: responsiveApp.barSpace1Width),
       Text(
         lightBlueText.toUpperCase(),
         textAlign: TextAlign.start,

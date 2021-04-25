@@ -53,7 +53,11 @@ class MobileTechnicalVisitContainer extends StatelessWidget {
                     ),
                   ),
                   child: Container(
-                      alignment: Alignment.center, child: Text(item.index)),
+                      alignment: Alignment.center,
+                      child: Text(item.index,
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                          ))),
                 ),
                 Container(
                   padding: EdgeInsets.only(top: 20.0),

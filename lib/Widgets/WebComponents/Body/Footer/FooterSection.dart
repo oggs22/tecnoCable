@@ -26,6 +26,7 @@ class FooterSection extends StatelessWidget {
           Text(
             footerTextSrt.toUpperCase(),
             style: TextStyle(
+                fontFamily: 'Poppins',
                 fontSize: responsiveApp.footerText,
                 fontWeight: FontWeight.bold),
           ),

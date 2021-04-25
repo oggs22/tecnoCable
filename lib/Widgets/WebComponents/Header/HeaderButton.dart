@@ -45,7 +45,7 @@ class _HeaderButtonState extends State<HeaderButton> {
               color: _isHovering[this.index] ? Colors.white : barWhiteTextColor,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 4),
           Visibility(
             maintainAnimation: true,
             maintainState: true,

@@ -55,6 +55,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
                       },
                       title: Text(aboutUsStr.toUpperCase(),
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               color: _colors[0]
                                   ? GrayCardBackgroundColor
@@ -71,6 +72,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
                       },
                       title: Text(servicesStr.toUpperCase(),
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               color: _colors[1]
                                   ? GrayCardBackgroundColor
@@ -87,6 +89,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
                       },
                       title: Text(knowUsStr.toUpperCase(),
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               color: _colors[2]
                                   ? GrayCardBackgroundColor
@@ -103,6 +106,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
                       },
                       title: Text(ratesStr.toUpperCase(),
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               color: _colors[3]
                                   ? GrayCardBackgroundColor
@@ -119,6 +123,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
                       },
                       title: Text(contactUsStr.toUpperCase(),
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               color: _colors[4]
                                   ? GrayCardBackgroundColor
@@ -155,6 +160,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
       onTap: onTap,
       title: Text(title.toUpperCase(),
           style: TextStyle(
+              fontFamily: 'Poppins',
               fontSize: 15,
               color: DarkBlueTextColor,
               fontWeight: FontWeight.bold)),
