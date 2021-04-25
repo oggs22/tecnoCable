@@ -50,3 +50,13 @@ String get here => "Aquí";
 String get contactUsTextStr => "Contáctanos";
 
 String get socialNetworksUsTextStr => "Vía whatsapp\nO INSTAGRAM";
+
+//Technical Visit
+String get technicalVisitFirstTitle => "¿Deseas recibir\nuna visita";
+String get technicalVisitSecondTitle => "de nuestros\ntécnicos?";
+String get technicalVisitFirst =>
+    "Agenda tu cita mediante nuestro canal de atención al cliente vía telefónica o whatsapp 424.999.99.99.Nuestros operadores harán una captura de datos para configurar una cita de atención en tu residencia.";
+String get technicalVisitSecond =>
+    "Cuando te asignemos uno de nuestros técnicos se va a comunicar contigo para coordinar el día y la hora de la visita.";
+String get technicalVisitThird =>
+    "Una vez que el técnico haya resuelto y se haya pagado por el servicio nos puedes enviar un mensaje o llenar nuestra encuesta para calificar el servicio de nuestro técnico. Y poder seguir dando el mejor servicio.";

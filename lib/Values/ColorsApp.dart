@@ -13,3 +13,5 @@ const DarkBlueTextColor = const Color(0xff0D0023);
 const LightBlueTextColor = const Color(0xff0066FF);
 
 const DarkGrayTextColor = const Color(0xff414141);
+
+const GrayCardBackgroundColor = const Color(0xffF1F0F8);

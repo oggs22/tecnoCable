@@ -87,6 +87,11 @@ class ResponsiveApp {
   // Contact Us
   get contactUsText => setSp(20);
 
+  //TechnicalVisit
+  get technicalVisitScrollWidth => setWidth(600);
+  get technicalVisionContainerCardHeight => setHeight(330);
+  get technicalVisionContainerCardWidth => setWidth(400);
+
   setWidth(int width) => width * _scaleWidth;
 
   setHeight(int height) => height * _scaleHeight;
