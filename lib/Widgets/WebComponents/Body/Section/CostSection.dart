@@ -4,6 +4,7 @@ import 'package:tecnocable/Values/StringApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
 import 'package:tecnocable/Widgets/Components/TitleWithTwoColors.dart';
 import 'package:tecnocable/Widgets/Components/ExplanationText.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CostSection extends StatelessWidget {
   CostSection();
@@ -79,14 +80,18 @@ class CostSection extends StatelessWidget {
                                     fontFamily: 'Poppins',
                                     fontSize: responsiveApp.sizeServiceList,
                                     height: 1.5)),
-                            Text(here,
-                                style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    color: backgroundPinkColor,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: responsiveApp.sizeServiceList,
-                                    height: 1.5))
+                            SizedBox(width: 3),
+                            InkWell(
+                              onTap: () => _launchWhatsapp(),
+                              child: Text(here,
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color: backgroundPinkColor,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: responsiveApp.sizeServiceList,
+                                      height: 1.5)),
+                            ),
                           ],
                         ),
                       )
@@ -97,5 +102,19 @@ class CostSection extends StatelessWidget {
             )
           ],
         ));
+  }
+
+  _launchWhatsapp() async {
+    const url = "https://wa.me/584126390634";
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        webOnlyWindowName: '_blank',
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
