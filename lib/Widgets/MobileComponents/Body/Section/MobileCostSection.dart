@@ -4,6 +4,7 @@ import 'package:tecnocable/Values/StringApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
 import 'package:tecnocable/Widgets/Components/TitleWithTwoColors.dart';
 import 'package:tecnocable/Widgets/Components/ExplanationText.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MobileCostSection extends StatelessWidget {
   MobileCostSection();
@@ -63,13 +64,17 @@ class MobileCostSection extends StatelessWidget {
                             color: DarkGrayTextColor,
                             fontFamily: 'Poppins',
                             fontSize: responsiveApp.sizeServiceList)),
-                    Text(here,
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: backgroundPinkColor,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold,
-                            fontSize: responsiveApp.sizeServiceList))
+                    SizedBox(width: 3),
+                    InkWell(
+                      onTap: () => _launchWhatsapp(),
+                      child: Text(here,
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: backgroundPinkColor,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: responsiveApp.sizeServiceList)),
+                    ),
                   ],
                 ),
               ),
@@ -79,5 +84,19 @@ class MobileCostSection extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  _launchWhatsapp() async {
+    const url = "https://wa.me/584126390634";
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        webOnlyWindowName: '_blank',
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

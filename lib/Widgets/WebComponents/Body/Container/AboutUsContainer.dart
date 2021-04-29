@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Values/StringApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUsContainer extends StatelessWidget {
   ResponsiveApp responsiveApp;
@@ -36,7 +39,7 @@ class AboutUsContainer extends StatelessWidget {
                     primary: backgroundPinkColor,
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () => _launchWhatsapp(),
                   child: Text(aboutUsButtonTextStr.toUpperCase(),
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -46,5 +49,19 @@ class AboutUsContainer extends StatelessWidget {
             ],
           ),
         ));
+  }
+
+  _launchWhatsapp() async {
+    const url = "https://wa.me/584126390634";
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        webOnlyWindowName: '_blank',
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
