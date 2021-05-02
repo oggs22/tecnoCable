@@ -76,7 +76,7 @@ class _HeaderState extends State<Header> {
   }
 
   _launchInstagram() async {
-    const url = "https://www.instagram.com/ltoglia7/";
+    const url = "https://www.instagram.com/tecnocable.ve/";
     if (await canLaunch(url)) {
       await launch(
         url,
