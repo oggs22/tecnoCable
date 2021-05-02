@@ -17,6 +17,7 @@ class MobileServiceSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: responsiveApp.aboutUsButtonSpace),
           Image.asset(
             'assets/images/mobile_telecommunications.png',
             fit: BoxFit.cover,
