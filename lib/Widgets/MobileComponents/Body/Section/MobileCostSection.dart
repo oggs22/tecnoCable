@@ -24,7 +24,7 @@ class MobileCostSection extends StatelessWidget {
           ),
           SizedBox(height: responsiveApp.aboutUsButtonSpace),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TitleWithTwoColors(
                   darkBlueText: firstTitleCostTextSrt,
@@ -48,37 +48,44 @@ class MobileCostSection extends StatelessWidget {
                 explanationText: reWiriginExplanationTextStr,
               ),
               SizedBox(height: responsiveApp.aboutUsButtonSpace),
-              Text(installationAntennasTextStr,
-                  style: TextStyle(
-                      color: DarkGrayTextColor,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.bold,
-                      fontSize: responsiveApp.sizeServiceList)),
               Container(
-                width: MediaQuery.of(context).size.width - 150,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                width: 300,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(installationAntennasExplanationTextStr,
+                    Text(installationAntennasTextStr,
                         style: TextStyle(
                             color: DarkGrayTextColor,
                             fontFamily: 'Poppins',
-                            fontSize: responsiveApp.sizeServiceList)),
-                    SizedBox(width: 3),
-                    InkWell(
-                      onTap: () => _launchWhatsapp(),
-                      child: Text(here,
-                          style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              color: backgroundPinkColor,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.bold,
-                              fontSize: responsiveApp.sizeServiceList)),
+                            fontWeight: FontWeight.bold,
+                            fontSize: responsiveApp.sizeServiceList,
+                            height: 1.5)),
+                    Container(
+                      child: Row(
+                        children: [
+                          Text(installationAntennasExplanationTextStr,
+                              style: TextStyle(
+                                  color: DarkGrayTextColor,
+                                  fontFamily: 'Poppins',
+                                  fontSize: responsiveApp.sizeServiceList)),
+                          SizedBox(width: 3),
+                          InkWell(
+                            onTap: () => _launchWhatsapp(),
+                            child: Text(here,
+                                style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    color: backgroundPinkColor,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: responsiveApp.sizeServiceList)),
+                          ),
+                        ],
+                      ),
                     ),
+                    SizedBox(height: responsiveApp.aboutUsButtonSpace),
                   ],
                 ),
               ),
-              SizedBox(height: responsiveApp.aboutUsButtonSpace),
             ],
           )
         ],

@@ -15,27 +15,28 @@ class ExplanationText extends StatelessWidget {
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
     return Container(
+        width: 300,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(titleText,
-          style: TextStyle(
-              color: DarkGrayTextColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.bold,
-              fontSize: responsiveApp.sizeServiceList,
-              height: 1.5)),
-      Text(costText,
-          style: TextStyle(
-              color: backgroundPinkColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.bold,
-              fontSize: responsiveApp.sizeServiceList,
-              height: 1.5)),
-      Text(explanationText,
-          style: TextStyle(
-              color: DarkGrayTextColor,
-              fontFamily: 'Poppins',
-              fontSize: responsiveApp.sizeServiceList,
-              height: 1.5))
-    ]));
+          Text(titleText,
+              style: TextStyle(
+                  color: DarkGrayTextColor,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
+                  fontSize: responsiveApp.sizeServiceList,
+                  height: 1.5)),
+          Text(costText,
+              style: TextStyle(
+                  color: backgroundPinkColor,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
+                  fontSize: responsiveApp.sizeServiceList,
+                  height: 1.5)),
+          Text(explanationText,
+              style: TextStyle(
+                  color: DarkGrayTextColor,
+                  fontFamily: 'Poppins',
+                  fontSize: responsiveApp.sizeServiceList,
+                  height: 1.5))
+        ]));
   }
 }

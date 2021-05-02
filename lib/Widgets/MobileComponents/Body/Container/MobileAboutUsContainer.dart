@@ -15,15 +15,17 @@ class MobileAboutUsContainer extends StatelessWidget {
         height: MediaQuery.of(context).size.height - 55,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
+            color: backgroundBlueColor,
             image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage("assets/images/background.png"),
-        )),
+              fit: BoxFit.fill,
+              image: AssetImage("assets/images/mobile_background.png"),
+            )),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Image.asset("assets/images/mobile_about.png"),
               Text(aboutUsTextStr.toUpperCase(),
                   style: TextStyle(
                       fontFamily: 'Poppins',
