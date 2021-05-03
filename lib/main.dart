@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         responsiveApp = ResponsiveApp(context);
         return Theme(
             data: ThemeData(
-              backgroundColor: backgroundWhiteColor,
+              backgroundColor: GrayCardBackgroundColor,
               primaryColor: Colors.black87,
               accentColor: Colors.blueGrey,
               iconTheme: IconThemeData(color: Colors.white),
