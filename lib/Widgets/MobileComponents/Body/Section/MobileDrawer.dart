@@ -3,11 +3,11 @@ import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Values/StringApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class MobileDrawer extends StatefulWidget {
-  const MobileDrawer({
-    Key key,
-  }) : super(key: key);
+  AutoScrollController _scrollController;
+  MobileDrawer(this._scrollController);
 
   @override
   _MobileDrawerState createState() => _MobileDrawerState();
@@ -181,6 +181,8 @@ class _MobileDrawerState extends State<MobileDrawer> {
 
       _colors[index] = true;
     });
+    Scaffold.of(context).openEndDrawer();
+    scrollIndex(index);
   }
 
   _launchWhatsapp() async {
@@ -209,5 +211,9 @@ class _MobileDrawerState extends State<MobileDrawer> {
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  scrollIndex(index) {
+    widget._scrollController.scrollToIndex(index);
   }
 }

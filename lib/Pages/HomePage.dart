@@ -33,8 +33,21 @@ class _HomePageState extends State<HomePage> {
   bool _isVisible = false;
   AutoScrollController autoScrollController;
 
+  _scrollListener() {
+    setState(() {
+      _scrollPosition = autoScrollController.position.pixels;
+    });
+  }
+
   @override
   void initState() {
+    autoScrollController = AutoScrollController(
+        //add this for advanced viewport boundary. e.g. SafeArea
+        viewportBoundaryGetter: () =>
+            Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
+        axis: Axis.vertical);
+
+    autoScrollController.addListener(_scrollListener);
     super.initState();
   }
 
@@ -50,31 +63,60 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       key: homeScaffoldKey,
       backgroundColor: Theme.of(context).backgroundColor,
-      floatingActionButton: Visibility(
-        visible: _isVisible,
-        child: FloatingActionButton(
-          onPressed: () => {autoScrollController.scrollToIndex(0)},
-          child: Icon(Icons.arrow_upward),
-        ),
-      ),
       appBar: isMobileAndTablet(context)
           ? TecnocableAppBar(_opacity)
-          : Header(_opacity),
-      drawer: MobileDrawer(),
-      body: ListView(children: <Widget>[
-        isMobileAndTablet(context)
-            ? MobileAboutUsContainer()
-            : AboutUsContainer(),
-        isMobileAndTablet(context) ? MobileServiceSection() : ServiceSection(),
-        isMobileAndTablet(context)
-            ? MobileTechnicalVisitSection()
-            : TechnicalVisitSection(),
-        isMobileAndTablet(context) ? MobileCostSection() : CostSection(),
-        isMobileAndTablet(context)
-            ? MobileContactUsSection()
-            : ContactUsSection(),
-        isMobileAndTablet(context) ? MobileFooterSection() : FooterSection(),
+          : Header(_opacity, autoScrollController),
+      drawer: MobileDrawer(autoScrollController),
+      body: ListView(controller: autoScrollController, children: <Widget>[
+        addScroll(
+            Container(
+              child: isMobileAndTablet(context)
+                  ? MobileAboutUsContainer()
+                  : AboutUsContainer(),
+            ),
+            0),
+        addScroll(
+            Container(
+              child: isMobileAndTablet(context)
+                  ? MobileServiceSection()
+                  : ServiceSection(),
+            ),
+            1),
+        addScroll(
+            Container(
+              child: isMobileAndTablet(context)
+                  ? MobileTechnicalVisitSection()
+                  : TechnicalVisitSection(),
+            ),
+            2),
+        addScroll(
+            Container(
+                child: isMobileAndTablet(context)
+                    ? MobileCostSection()
+                    : CostSection()),
+            3),
+        addScroll(
+            Container(
+              child: isMobileAndTablet(context)
+                  ? MobileContactUsSection()
+                  : ContactUsSection(),
+            ),
+            4),
+        Container(
+          child: isMobileAndTablet(context)
+              ? MobileFooterSection()
+              : FooterSection(),
+        )
       ]),
+    );
+  }
+
+  addScroll(Widget child, index) {
+    return AutoScrollTag(
+      key: ValueKey(index),
+      controller: autoScrollController,
+      index: index,
+      child: child,
     );
   }
 }

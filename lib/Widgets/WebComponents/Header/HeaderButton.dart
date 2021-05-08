@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tecnocable/Values/ResponsiveApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HeaderButton extends StatefulWidget {
   String title;
   int index;
   bool lineIsVisible;
+  AutoScrollController _scrollController;
 
-  HeaderButton(this.index, this.title, {this.lineIsVisible = true});
+  HeaderButton(this.index, this.title, this._scrollController,
+      {this.lineIsVisible = true});
 
   @override
   State<StatefulWidget> createState() => _HeaderButtonState(this.index);
@@ -24,7 +27,6 @@ class _HeaderButtonState extends State<HeaderButton> {
   @override
   Widget build(BuildContext context) {
     responsiveApp = ResponsiveApp(context);
-    // TODO: implement build
     return InkWell(
       onHover: (value) {
         setState(() {
@@ -33,7 +35,7 @@ class _HeaderButtonState extends State<HeaderButton> {
               : _isHovering[this.index] = false;
         });
       },
-      onTap: () {},
+      onTap: () => scrollIndex(index),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -62,5 +64,9 @@ class _HeaderButtonState extends State<HeaderButton> {
         ],
       ),
     );
+  }
+
+  scrollIndex(index) {
+    widget._scrollController.scrollToIndex(index);
   }
 }

@@ -4,11 +4,13 @@ import 'package:tecnocable/Values/StringApp.dart';
 import 'package:tecnocable/Values/ColorsApp.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'HeaderButton.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class Header extends StatefulWidget implements PreferredSizeWidget {
+  AutoScrollController autoScrollController;
   final double opacity;
 
-  Header(this.opacity);
+  Header(this.opacity, this.autoScrollController);
 
   @override
   _HeaderState createState() => _HeaderState();
@@ -36,15 +38,18 @@ class _HeaderState extends State<Header> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                      HeaderButton(0, aboutUsStr),
+                      HeaderButton(0, aboutUsStr, widget.autoScrollController),
+                      SizedBox(
+                        width: responsiveApp.barSpace2Width,
+                      ),
+                      HeaderButton(1, servicesStr, widget.autoScrollController),
                       SizedBox(width: responsiveApp.barSpace2Width),
-                      HeaderButton(1, servicesStr),
+                      HeaderButton(2, knowUsStr, widget.autoScrollController),
                       SizedBox(width: responsiveApp.barSpace2Width),
-                      HeaderButton(2, knowUsStr),
+                      HeaderButton(3, ratesStr, widget.autoScrollController),
                       SizedBox(width: responsiveApp.barSpace2Width),
-                      HeaderButton(3, ratesStr),
-                      SizedBox(width: responsiveApp.barSpace2Width),
-                      HeaderButton(4, contactUsStr),
+                      HeaderButton(
+                          4, contactUsStr, widget.autoScrollController),
                       SizedBox(width: responsiveApp.barSpace1Width),
                       InkWell(
                         onTap: () => _launchWhatsapp(),
