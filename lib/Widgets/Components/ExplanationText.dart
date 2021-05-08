@@ -28,13 +28,14 @@ class ExplanationText extends StatelessWidget {
               style: TextStyle(
                   color: backgroundPinkColor,
                   fontFamily: 'Poppins',
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                   fontSize: responsiveApp.sizeServiceList,
                   height: 1.5)),
           Text(explanationText,
               style: TextStyle(
                   color: DarkGrayTextColor,
                   fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
                   fontSize: responsiveApp.sizeServiceList,
                   height: 1.5))
         ]));

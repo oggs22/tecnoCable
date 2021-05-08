@@ -169,7 +169,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
               fontFamily: 'Poppins',
               fontSize: 15,
               color: DarkBlueTextColor,
-              fontWeight: FontWeight.bold)),
+              fontWeight: FontWeight.w600)),
     );
   }
 

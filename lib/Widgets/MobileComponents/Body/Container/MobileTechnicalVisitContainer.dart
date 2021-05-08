@@ -57,6 +57,7 @@ class MobileTechnicalVisitContainer extends StatelessWidget {
                       child: Text(item.index,
                           style: TextStyle(
                             fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w700,
                           ))),
                 ),
                 Container(
@@ -76,6 +77,7 @@ class MobileTechnicalVisitContainer extends StatelessWidget {
                     style: TextStyle(
                         color: DarkGrayTextColor,
                         fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
                         fontSize: responsiveApp.sizeServiceList,
                         height: 1.5))),
           ],

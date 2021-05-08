@@ -67,6 +67,7 @@ class MobileCostSection extends StatelessWidget {
                               style: TextStyle(
                                   color: DarkGrayTextColor,
                                   fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w400,
                                   fontSize: responsiveApp.sizeServiceList)),
                           SizedBox(width: 3),
                           InkWell(

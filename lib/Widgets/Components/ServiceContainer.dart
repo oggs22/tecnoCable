@@ -18,6 +18,7 @@ class ServiceContainer extends StatelessWidget {
       style: TextStyle(
           color: DarkGrayTextColor,
           fontFamily: 'Poppins',
+          fontWeight: FontWeight.w400,
           fontSize: responsiveApp.sizeServiceList,
           height: 1.5),
     );

@@ -30,16 +30,18 @@ class MobileFooterSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
                 onTap: () => _launchWhatsapp(),
-                child: Image.asset('assets/images/mobile_footer_whatsapp.png'),
+                child: Image.asset('assets/images/mobile_footer_whatsapp.png',
+                    height: 80),
               ),
               SizedBox(width: responsiveApp.barSpace1Width),
               InkWell(
                 onTap: () => _launchInstagram(),
-                child: Image.asset('assets/images/mobile_footer_instagram.png'),
+                child: Image.asset('assets/images/mobile_footer_instagram.png',
+                    height: 80),
               ),
             ],
           )
