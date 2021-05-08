@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
       appBar: isMobileAndTablet(context)
           ? TecnocableAppBar(_opacity)
           : Header(_opacity, autoScrollController),
-      drawer: MobileDrawer(),
+      drawer: MobileDrawer(autoScrollController),
       body: ListView(controller: autoScrollController, children: <Widget>[
         addScroll(
             Container(
